@@ -5,6 +5,12 @@
   font-style: normal;
 }
 
+.Kaisei {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 main {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -163,6 +169,18 @@ h3 {
     position: relative;
 }
 
+#listening-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #starburst {
     position: absolute;
     top: 5%;
@@ -185,18 +203,6 @@ h3 {
     right: 2%;
     z-index: 0;
     width: 25%;
-}
-
-#listening-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .album-row {
@@ -243,14 +249,70 @@ h3 {
 /* Life Section Styles */
 
 #life {
+    position: relative;
     background-color: #ff99cc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-#life img {
-    height: 150px;
+#life h2 {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 6rem;
+    text-align: left;
+    margin: 1rem 0 0 0;
+    padding-left: 1rem;
+}
+
+#life-canvas {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+}
+
+#kaeden-window {
+    top: 10%;
+    left: 10%;
+    height: 60%;
     width: auto;
-    margin: 0;
+    position: absolute;
+}
+
+#music-window {
+    top: 12%;
+    left: 43%;
+    height: 45%;
+    width: auto;
+    position: absolute;
+}
+#volleyball-window {
+    top: 25%;
+    right: 7%;
+    height: 50%;
+    width: auto;
+    position: absolute;
+}
+
+#julia-window {
+    bottom: 5%;
+    left: 33%;
+    height: 35%;
+    width: auto;
+    position: absolute;
+}
+
+#today-window {
+    bottom: 18%;
+    left: 53%;
+    height: 20%;
+    width: auto;
+    position: absolute;
+}
+
+#life-window {
+    bottom: 10%;
+    left: 10%;
+    height: 15%;
+    width: auto;
+    position: absolute;
 }
