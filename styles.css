@@ -19,7 +19,6 @@ main {
 
 section {
   height: 100vh;
-  scroll-snap-align: start;
   display: flex;
   font-family: sans-serif;
 }
