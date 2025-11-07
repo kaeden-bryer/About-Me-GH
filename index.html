@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <link rel="icon" href="/public/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
     <title>Kaeden</title>
 </head>
 <body>
@@ -82,13 +85,15 @@
         </section>
 
         <section id="life">
-            <h2>LIFE OF KAEDEN✨</h2>
-            <img src="/public/kaeden.png" alt="Life of Kaeden Image" width="80%">
-            <img src="/public/music.png" alt="Life of Kaeden Image" width="80%">
-            <img src="/public/volleyball.png" alt="Life of Kaeden Image" width="80%">
-            <img src="/public/julia.png" alt="Life of Kaeden Image" width="80%">
-            <img src="/public/today.png" alt="Life of Kaeden Image" width="80%">
-            <img src="/public/life.png" alt="Life of Kaeden Image" width="80%">
+            <h2 class="Kaisei">LIFE OF KAEDEN✨</h2>
+            <div id="life-canvas">
+                <img id="kaeden-window" src="/public/kaeden.png" alt="Life of Kaeden Image">
+                <img id="music-window" src="/public/music.png" alt="Kaeden Playing Piano Image">
+                <img id="volleyball-window" src="/public/volleyball.png" alt="Kaeden Playing Volleyball Image">
+                <img id="julia-window" src="/public/julia.png" alt="Kaeden with Julia Image">
+                <img id="today-window" src="/public/today.png" alt="Today notification popup">
+                <img id="life-window" src="/public/life.png" alt="Life loading bar">
+            </div>
         </section>
     </main>
 </body>
