@@ -18,6 +18,8 @@ section {
   font-family: sans-serif;
 }
 
+/* Hero Section Styles */
+
 #hero {
   background-color: #faf7f7;
   position: relative;
@@ -94,6 +96,8 @@ h3 {
     transition: transform 0.3s;
 }
 
+/* About Section Styles */
+
 #about {
     background-color: #85d7e6;
     display: flex;
@@ -132,6 +136,15 @@ h3 {
 .indent-3 { display: block; padding-left: 6em; }
 .indent-4 { display: block; padding-left: 8em; }
 
+#about-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+}
+
 #about-header h2 {
     font-family: 'Bvllet', sans-serif;
     color: #ff751f;
@@ -141,10 +154,103 @@ h3 {
     margin: 0;
 }
 
+/* Listening Section Styles */
+
 #listening {
     background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+#starburst {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    z-index: 0;
+    width: 15%;
+}
+
+#marvin {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 0;
+    width: 15%;
+}
+
+#marcy {
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    z-index: 0;
+    width: 25%;
+}
+
+#listening-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.album-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.album-row img {
+    width: 17vw;
+    height: auto;
+    margin: 1rem;
+    transition: transform 0.3s;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#row-1 {
+    margin-top: 5rem;
+    margin-left: 20%;
+}
+
+#row-2 {
+    margin-top: 0;
+    margin-left: 5%;
+}
+
+#listening h2 {
+    font-family: 'Bvllet', sans-serif;
+    color: #ff751f;
+    font-weight: lighter;
+    font-size: 12rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 0.9;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 1rem;
+}
+
+/* Life Section Styles */
 
 #life {
     background-color: #ff99cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#life img {
+    height: 150px;
+    width: auto;
+    margin: 0;
 }
