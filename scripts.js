@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Preserve scroll position on reload
+    if (localStorage.getItem('scrollPosition')) {
+        const scrollPos = localStorage.getItem('scrollPosition');
+        document.querySelector('main').scrollTop = scrollPos;
+        localStorage.removeItem('scrollPosition'); // Clean up after use
+    }
+    
+    // Save scroll position before page unload
+    window.addEventListener('beforeunload', function() {
+        const scrollPos = document.querySelector('main').scrollTop;
+        localStorage.setItem('scrollPosition', scrollPos);
+    });
+
     const carousel = document.getElementById('image-carousel');
     const images = carousel.querySelectorAll('img');
     
@@ -57,4 +70,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle window resize
     window.addEventListener('resize', handleResize);
+
+    const animatedElements = document.querySelectorAll('.browser-window');
+
+    // Browser window animation
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // Stop observing once animated
+        }
+    });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+        
+        // Add hover effects with JavaScript
+        element.addEventListener('mouseenter', function() {
+            if (this.classList.contains('in-view')) {
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'transform 0.3s ease';
+                element.style.cursor = 'pointer';
+            }
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            if (this.classList.contains('in-view')) {
+                this.style.transform = 'scale(1)';
+                this.style.transition = 'transform 0.3s ease';
+                element.style.cursor = 'default';
+            }
+        });
+    });
 });
