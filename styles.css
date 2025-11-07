@@ -74,22 +74,19 @@ h3 {
 }
 
 #image-carousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
+    display: block;
     position: relative;
+    overflow: hidden;
     width: 100%;
+    height: 2000px; /* Adjust based on your image height */
 }
 
 #image-carousel img {
     width: 25vw;
     height: auto;
-    flex-shrink: 0;
     margin-right: 2rem;
     z-index: 2;
-    animation: scroll-right 35s linear infinite;
+    display: block;
 }
 
 #image-carousel img:hover {
@@ -97,17 +94,51 @@ h3 {
     transition: transform 0.3s;
 }
 
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100vw);
-    }
-    100% {
-        transform: translateX(100vw);
-    }
-}
-
 #about {
     background-color: #85d7e6;
+    display: flex;
+    flex-direction: row;
+}
+
+#about-window {
+    position: relative;
+    display: inline-block;
+}
+
+#about-window-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about-window-text {
+    position: absolute;
+    top: 20%; 
+    left: 10%; 
+    right: 15%; 
+    bottom: 15%; 
+    padding: 20px;
+    font-family: 'Courier New', monospace; 
+    font-size: 1rem;
+    line-height: 2;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.indent-0 { display: block; padding-left: 0; }
+.indent-1 { display: block; padding-left: 2em; }
+.indent-2 { display: block; padding-left: 4em; }
+.indent-3 { display: block; padding-left: 6em; }
+.indent-4 { display: block; padding-left: 8em; }
+
+#about-header h2 {
+    font-family: 'Bvllet', sans-serif;
+    color: #ff751f;
+    font-weight: lighter;
+    font-size: 12rem;
+    text-align: center;
+    margin: 0;
 }
 
 #listening {
